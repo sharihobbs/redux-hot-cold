@@ -33,15 +33,15 @@ export default (state = initialState, action) => {
         const difference = Math.abs(guess - state.correctAnswer);
 
         if (difference >= 50) {
-            feedback = "You're Ice Cold...";
+            feedback = `You're Ice Cold...`;
         } else if (difference >= 30) {
-            feedback = "You're Cold...";
+            feedback = `You're Cold...`;
         } else if (difference >= 10) {
-            feedback = "You're Warm.";
+            feedback = `You're Warm.`;
         } else if (difference >= 1) {
-            feedback = "You're Hot!";
+            feedback = `You're Hot!`;
         } else {
-            feedback = 'You got it!';
+            feedback = `You got it!`;
         }
 
         return Object.assign({}, state, {
